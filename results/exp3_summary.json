@@ -1,0 +1,20 @@
+{
+  "experiment": "exp3_dclass_uvs_failure",
+  "L1_c1": [
+    1.0,
+    0.002
+  ],
+  "L2_c2": [
+    10.0,
+    0.2
+  ],
+  "n_simulations": 10000000,
+  "h_subadditive_on_grid_L1_c1": true,
+  "h_subadditive_on_grid_L2_c2": true,
+  "uvs_violations_on_grid": 68,
+  "uvs_fails_somewhere": true,
+  "check_p": 0.68,
+  "var_sum_mc_at_check_p": 0.10026449121055572,
+  "var_components_sum_at_check_p": 0.10338550566140457,
+  "uvs_violated_at_check_p": true
+}

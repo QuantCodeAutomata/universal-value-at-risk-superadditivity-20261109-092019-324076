@@ -1,0 +1,26 @@
+{
+  "experiment": "exp1_pareto_uvs",
+  "alphas": [
+    0.7,
+    0.8,
+    0.9
+  ],
+  "n_simulations": 10000000,
+  "p_grid_points": 800,
+  "violations_of_uvs": 0,
+  "uvs_holds_everywhere": true,
+  "var_sum_at_p0.95": 198.29852659903386,
+  "var_components_sum_at_p0.95": 142.40668216969073,
+  "var_sum_at_p0.99": 1573.5161125954742,
+  "var_components_sum_at_p0.99": 1202.7234927379945,
+  "paper_table_reference": {
+    "p=0.95": {
+      "VaR_sum": 195,
+      "VaR_components_sum": 135
+    },
+    "p=0.99": {
+      "VaR_sum": 1550,
+      "VaR_components_sum": 1150
+    }
+  }
+}

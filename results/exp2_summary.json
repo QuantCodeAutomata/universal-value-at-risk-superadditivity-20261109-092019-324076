@@ -1,0 +1,15 @@
+{
+  "experiment": "exp2_stpetersburg_uvs_without_wuvs",
+  "n_simulations": 10000000,
+  "uvs_top_holds_everywhere": true,
+  "wuvs_bottom_violations": 407,
+  "wuvs_fails_somewhere": true,
+  "check_p": 0.55,
+  "var_weighted_sum_mc_at_check_p": 3.8,
+  "var_weighted_components_at_check_p": 4.0,
+  "paper_threshold_var_weighted_sum": 3.8,
+  "paper_benchmark_var_weighted_components": 4.0,
+  "tail_prob_mc_P(W>3.8)": 0.4062215,
+  "paper_tail_prob_P(W>3.8)": 0.40625,
+  "wuvs_fails_at_check_p": true
+}

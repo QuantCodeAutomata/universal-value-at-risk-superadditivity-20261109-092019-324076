@@ -102,10 +102,14 @@ def run(n_simulations: int = config.N_SIMULATIONS_RUN) -> dict:
 
     # Analytic check at p = 0.55 (paper Section 2, Example 2)
     p_check = config.EXP2_CHECK_P
-    var_weighted_sum_mc = float(np.quantile(weighted_sum, p_check))
+    var_weighted_sum_mc = round(float(np.quantile(weighted_sum, p_check)), 6)
     var_weighted_components = float(theta1 * stpetersburg_var(np.array([p_check]))[0]
                                      + theta2 * stpetersburg_var(np.array([p_check]))[0])
-    tail_prob_mc = float(np.mean(weighted_sum > config.EXP2_CHECK_THRESHOLD))
+    # Exact dyadic values of theta1*X1 + theta2*X2 (e.g. 0.1*2 + 0.9*4 = 3.8)
+    # can round to 3.8000000000000003 in float64, which would wrongly count
+    # as part of the strict tail event {W > 3.8}; a small tolerance restores
+    # the exact equality implied by the paper's analytic computation.
+    tail_prob_mc = float(np.mean(weighted_sum > config.EXP2_CHECK_THRESHOLD + 1e-9))
 
     top_violations = int((~top_table["superadditive"]).sum())
     bottom_violations = int((~bottom_table["superadditive"]).sum())
