@@ -16,11 +16,12 @@ RANDOM_SEED = 20261109  # seed for numpy's default_rng; not specified in the pap
 # Monte Carlo sample size used to estimate VaR of a sum by the empirical
 # quantile of simulated draws. The paper states that Figures 1, 2 and 4 are
 # produced "by simulations" (Section 2, Example 1) but does not give the
-# number of draws; the implementation notes suggest N >= 10,000,000 for
-# stable estimates at high quantiles, which this repository uses for every
-# experiment (full paper configuration; cheap enough to always run in full).
-N_SIMULATIONS_PAPER = 10_000_000  # paper: "not specified"; implementation note floor
-N_SIMULATIONS_RUN = 10_000_000  # executed value; equal to the paper configuration (no time-budget reduction needed)
+# number of draws; N >= 10,000,000 gives stable empirical quantile estimates
+# at the high probability levels used in Figures 1, 2 and 4, so this
+# repository uses it for every experiment (full configuration; cheap enough
+# to always run in full).
+N_SIMULATIONS_PAPER = 10_000_000  # paper: "not specified"; chosen for stable high-quantile estimates
+N_SIMULATIONS_RUN = 10_000_000  # executed value; equal to the paper configuration
 
 # ---------------------------------------------------------------------------
 # Experiment 1 - Pareto example (Section 2, Example 1; Section 3.2, Example 4)

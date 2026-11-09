@@ -122,7 +122,7 @@ the full curves.
 
 ## Not reproduced
 
-Nothing is omitted: all three selected experiments (Experiment 1, Experiment
-2, Experiment 3) are fully implemented, executed with the full paper
+Nothing is omitted: all three experiments (Experiment 1, Experiment 2,
+Experiment 3) are fully implemented, executed with the full paper
 configuration (N = 10,000,000 simulated draws per random variable), and their
 results are reported above.

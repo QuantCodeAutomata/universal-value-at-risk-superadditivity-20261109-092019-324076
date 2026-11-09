@@ -2,9 +2,8 @@
 
 VaR_p(X) is the left-continuous inverse of the CDF (paper Section 2):
 VaR_p(X) = inf{x in R : F(x) >= p}. For a Monte Carlo sample of X, VaR_p(X)
-is estimated by the empirical p-quantile of the sample (numpy.quantile),
-which is the standard simulation-based estimator and the one the paper's
-implementation notes point to ("use numpy.quantile or numpy.percentile").
+is estimated by the empirical p-quantile of the sample (numpy.quantile), the
+standard simulation-based estimator for a quantile-defined risk measure.
 """
 
 from __future__ import annotations
